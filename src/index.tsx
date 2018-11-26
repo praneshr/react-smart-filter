@@ -17,6 +17,7 @@ export interface IReactSmartFilterState {
   isBlured?: boolean;
   isOpen?: boolean;
   value?: string;
+  focusedIndex?: number;
 }
 
 
@@ -32,6 +33,7 @@ export default class ReactSmartFilter extends React.Component<IReactSmartFilterP
       isFocused: false,
       isBlured: true,
       isOpen: false,
+      focusedIndex: -1,
       value: '',
     }
   }
@@ -54,6 +56,7 @@ export default class ReactSmartFilter extends React.Component<IReactSmartFilterP
   onChange = (e: any) => {
     this.setState({
       value: e.target.value,
+      focusedIndex: -1,
     })
   }
 

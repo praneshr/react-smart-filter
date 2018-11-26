@@ -45,6 +45,12 @@ export const defaultStyles: (v: any) => IDefaultStyles = (variables) => ({
     cursor: 'pointer',
     label: 'option',
   },
+  optionFocused: {
+    background: 'blue',
+  },
+  optionSelected: {
+    background: 'orange',
+  },
 })
 
 export default (key: keyof IDefaultStyles, stylesOverride: any, variablesOverride: any, state: any) => {
